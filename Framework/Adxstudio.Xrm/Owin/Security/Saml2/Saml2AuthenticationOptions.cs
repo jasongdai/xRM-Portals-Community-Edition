@@ -63,7 +63,8 @@ namespace Adxstudio.Xrm.Owin.Security.Saml2
 			AuthenticationMode = AuthenticationMode.Passive;
 			Caption = "SAML";
 			NameIdPolicy = new NameIdPolicy { AllowCreate = true, Format = "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent" };
-			AuthnContextClassRef = new[] { AuthnContextClassTypes.PasswordProtectedTransport.OriginalString };
+            //Comment out because AuthnContextClassRef not supported in ESAS/Shibboleth Identity Provider
+            //AuthnContextClassRef = new[] { AuthnContextClassTypes.PasswordProtectedTransport.OriginalString };
 		}
 	}
 }
